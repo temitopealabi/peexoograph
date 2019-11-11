@@ -26,20 +26,43 @@
 /* react-calendar__navigation__arrow */
 .react-calendar__navigation__prev-button{
     position: absolute;
-    bottom: -350px;
+    bottom: -420px;
     font-size: 40px;
     color: #4d4d4d;
 }
 
+/* .react-calendar button {
+    padding: 13px;
+} */
+/* .react-calendar {
+    width: 360px !important;} */
+
+.react-calendar__tile--hasActive {
+    border-radius: 100%;
+    background-color: #ffb500 !important;
+}
+
+.react-calendar__tile--active {
+    background-color: #ffb500 !important;
+    color: white;
+    border-radius: 100%;
+}
+
 .react-calendar__navigation__next-button{
     position: absolute;
-    bottom: -350px;
+    bottom: -420px;
     left: 250px;
     font-size: 40px;
     color: #4d4d4d;
 }
 .react-calendar__navigation__prev2-button{
     display: none;
+}
+
+.react-calendar__tile:disabled {
+    background-color: #d3d3d3 !important;
+    border-radius: 100%;
+
 }
 
 .centerCircle{

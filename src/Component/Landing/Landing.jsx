@@ -8,7 +8,11 @@ import Header from '../Header/Header';
 // import 'react-infinite-calendar/styles.css'; 
 import './landing.css';
 
-
+const MoreCalendarDate = [
+    new Date(2019, 0, 9), new Date(2019, 1, 23), new Date(2018, 2, 25), new Date(2019, 3, 11),
+    new Date(2019, 4, 2), new Date(2019, 5, 13), new Date(2018, 6, 25), new Date(2019, 7, 21),
+    new Date(2019, 8, 16), new Date(2019, 9, 8), new Date(2018, 10, 30), new Date(2019, 11, 24)
+]
 
 // Render the Calendar
 var today = new Date();
@@ -112,7 +116,7 @@ class Landing extends Component {
                     <div className="row">
                         <ul className="col-md-4"><h1 id="afro">AfroShots<span><img src="/images/passmark_peexoo.png" width="25" alt="passmark_peexoo" /></span></h1></ul>
                         <ul className="col-md-2"></ul>
-                        <ul class="col-md-6">
+                        <ul className="col-md-6">
 
                             <div className="row ml-auto">
                                 <div className="col"><button className="btn buttonText  roundButton btn-block btn-outline-warning">Message Photographer</button></div>
@@ -127,9 +131,15 @@ class Landing extends Component {
                 <div className="container my-4" style={{ position: 'relative' }}>
                     <Calendar
                         onChange={this.onChange}
-                        value={['2019-06-01', '2019-08-01']}
                         showDoubleView={true}
+                        value={this.state.date}
+                        showNeighboringMonth={true}
+                        // minDate={this.state.date}
+                        tileClassName={'mt-1 ml-1'}
                         showFixedNumberOfWeeks={true}
+                        // tileDisabled={({ activeStartDate, date, view }) => date.getDate() <= new Date(2019, 10, 11).getDate()}
+                        tileDisabled={({ activeStartDate = new Date(), date = new Date(2019, 10, 13), view = 'month' }) => (date.getMonth() === 10 &&
+                            date.getDate() > 13 && date.getDate() < 18)}
                     />
                     <span className="centerCircle"><img src="/images/round_icon.png" width="30" alt="round_icon" /></span>
                 </div>
