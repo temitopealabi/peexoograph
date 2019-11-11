@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Suspense } from "react";
+import { Route, Redirect, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from "./Component/Header/Header.jsx";
+import IamPhotographer from "./Component/IamPhotoGrapher/IamPhotoGrapher.jsx";
+import NotFound from "./Component/Not-Found/NotFound.jsx";
+import Landing from "./Component/Landing/Landing.jsx";
+import "./App.css";
+
+
+
+
+
+
+
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Switch>
+
+          <Route path="/not-found" component={NotFound} />
+          <Route path="/iamphoto" component={IamPhotographer} />
+          <Route path="/" render={props => (<Suspense
+            fallback={
+              <div>
+                <img src="/images/logo.png" alt="loader visual" />
+              </div>
+            } >
+            <Landing {...props} /></Suspense>)}
+          />
+          <Redirect to="/not-found" />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

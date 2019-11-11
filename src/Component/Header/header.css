@@ -1,0 +1,35 @@
+@media(max-width:768px){
+   
+    .adjustSignupMobile {
+        width:100px !important;
+    }
+    #adjustButtonPad {
+        padding-left: 10px;
+    }
+
+    #buttonToggle {
+        border: 1px solid white;
+      }
+      #toggleIcon {
+        background-color: white;
+      }
+}
+
+.backgroundGreen{
+  background: #009051
+}
+
+.linkText{
+  font-family: Roboto !;
+  font-style: normal;
+  font-weight: normal;
+  
+  }
+
+.active{
+  color: #ffb500 !important;
+  font-weight: bold !important;
+}
+
+
+

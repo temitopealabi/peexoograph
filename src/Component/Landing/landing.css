@@ -1,0 +1,99 @@
+.peexooTab{
+    background-color: #ffb500;
+}
+
+.pointerTab{
+    cursor: pointer;
+}
+
+.tabActiveBg{
+    background-color: #4d4d4d;
+}
+
+.roundButton{
+    border-radius: 60px;
+     padding: 7px 18px;
+}
+
+.btn-outline-warning:hover {
+    color:#ffffff !important;
+}
+
+.react-calendar__navigation{
+    position: relative !important;
+}
+
+/* react-calendar__navigation__arrow */
+.react-calendar__navigation__prev-button{
+    position: absolute;
+    bottom: -350px;
+    font-size: 40px;
+    color: #4d4d4d;
+}
+
+.react-calendar__navigation__next-button{
+    position: absolute;
+    bottom: -350px;
+    left: 250px;
+    font-size: 40px;
+    color: #4d4d4d;
+}
+.react-calendar__navigation__prev2-button{
+    display: none;
+}
+
+.centerCircle{
+    position: absolute;
+    left: 150px;
+    bottom: -60px;
+}
+
+.react-calendar__navigation__next2-button{
+    display: none;
+}
+
+/* react-calendar__navigation__arrow */
+/* .react-calendar__navigation__prev2-button{
+    position: absolute;
+    bottom: -350px;
+    font-size: 40px;
+    color: red;
+} */
+
+@media (max-width: 768px) {
+
+    .sizeResize {
+        height: 568px;
+        width: 100%;
+    }
+    .buttonText{
+        font-size: 1rem;
+    }
+
+    #positionInnerImage {
+        position: absolute;
+        bottom: 120px;
+        left: 145px;
+    }
+
+    #afro{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #positionInnerImage{
+        position: absolute;
+        top: -135px;
+        left: 125px;
+    }
+
+    #afro{
+        font-size: 65px;
+    }
+
+
+    .buttonText{
+        font-size: 1.25rem;
+    }
+}
