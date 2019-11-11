@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Calendar from 'react-calendar';
 import { Link } from 'react-router-dom'
+import Footer from '../Footer/Footer';
 import { AccountConsumer } from "../../AccountContext/AccountProvider";
 import Header from '../Header/Header';
 
 // import 'react-infinite-calendar/styles.css'; 
 import './landing.css';
+
 
 
 // Render the Calendar
@@ -131,7 +133,8 @@ class Landing extends Component {
                     />
                     <span className="centerCircle"><img src="/images/round_icon.png" width="30" alt="round_icon" /></span>
                 </div>
-
+                <div className="clearfix"></div>
+                <div className="pt-5"><Footer /></div>
             </React.Fragment>
         );
     }
